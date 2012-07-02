@@ -1,0 +1,4 @@
+pygments: false
+future: false
+permalink: /blog/posts/:title.html
+title: finnmack.com
