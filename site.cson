@@ -1,0 +1,10 @@
+index:
+  type: "file"
+  subtype: "blog/summary"
+  ext: "html"
+pages: 
+  type: "directory"
+  subtype: "article/viewer"
+posts:
+  type: "directory"
+  subtype: "post/viewer"

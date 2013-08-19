@@ -1,3 +1,2 @@
-_site/
-s3.yml
+build/
 .DS_Store

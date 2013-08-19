@@ -1,0 +1,9 @@
+web:
+  host: "0.0.0.0"
+  port: "80"
+  api:
+    url: "http://staging-www.pandastrike.com:80"
+publish:
+  s3:
+    bucket: "staging-www.pandastrike.com"
+
