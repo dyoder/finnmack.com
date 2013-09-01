@@ -41,7 +41,7 @@ module.exports = class Application extends CSS
     
     @breakpoint ({desktop, tablet, mobile, large, medium, small}) =>
       
-      scale 0.85
+      scale 0.9
       
       @rule "body", =>
         @margin "auto"
@@ -51,7 +51,7 @@ module.exports = class Application extends CSS
       status "success"
       status "alert"
 
-      rhythm (1+1/6), ({typeSize}) =>
+      rhythm (1+1/4), ({typeSize}) =>
         for n in [1..5]
           @rule "h#{n}", ({heading}) =>
             do heading
@@ -76,38 +76,43 @@ module.exports = class Application extends CSS
           @fontFamily @theme.fonts.headings
           typeSize 1
 
-      @context "nav", =>
-      
-        @rule =>
-          @marginBottom "6rem"
+      rhythm (0.8), ({typeSize}) =>
 
-        @context contains(".logo"), =>
+        @context "nav", =>
       
-          @rule ({cell}) =>
-            do cell
-            @verticalAlign "middle"
-            @width "18rem"
+          @rule =>
+            @marginBottom "2rem"
+
+          @context contains(".logo"), =>
       
-          @rule contains("img"), =>
-            @width "16rem"
+            @rule ({cell}) =>
+              do cell
+              @verticalAlign "middle"
+              @width "28rem"
+      
+            @rule contains("h1"), =>
+              typeSize 7
+              @letterSpacing "0.25rem"
+              @color "black"
+              @fontFamily @theme.fonts.body
     
-        @context contains(".blurb"), =>
+          @context contains(".blurb"), =>
       
-          @rule ({cell}) =>
-            do cell
-            @paddingLeft "2rem"
-            @verticalAlign "middle"
-            @width "54rem"
+            @rule ({cell}) =>
+              do cell
+              @paddingLeft "2rem"
+              @verticalAlign "middle"
+              @width "44rem"
     
-          @rule contains("h1"), =>
-            @fontFamily @theme.fonts.special
-            @marginBottom "1rem"
+            @rule contains("h1"), =>
+              @fontFamily @theme.fonts.special
+              @marginBottom "1rem"
           
-          rhythm (1+1/6), ({typeSize}) =>
+            rhythm (1+1/6), ({typeSize}) =>
 
-            @rule contains("p"), =>
-              typeSize 3
-              @fontFamily @theme.fonts.headings
+              @rule contains("p"), =>
+                typeSize 3
+                @fontFamily @theme.fonts.headings
           
       rhythm (1+1/4), ({typeSize}) =>
       
@@ -142,11 +147,31 @@ module.exports = class Application extends CSS
         @rule ".feature ul, aside ul", =>
           @marginLeft "2em"
 
-        @context ".blog-summary", =>
+        @context ".blog.summary", =>
+          
           @rule contains("ul"), =>
             @margin "0"
             @padding "0"
             @listStyle "none"
+          
+          @context contains("li"), =>
+            
+            @rule =>
+              @marginBottom "2rem"
+              @clear "both"
+              
+            @rule contains(".note"), =>
+              @display "none"
+            
+            @context contains("figure"), =>
+              @rule =>
+                @width "19rem"
+                @float "right"
+                @marginRight 0
+                @marginLeft "2rem"
+            
+              @rule contains("img"), =>
+                @width "18rem"
           
         @context contains(".byline"), =>
           
@@ -161,16 +186,20 @@ module.exports = class Application extends CSS
             @fontWeight "bold"
       
       
-        @context ".blog", =>
+        @context ".blog", ".article", =>
+
           @rule =>
             @position "relative"
             @width "54rem"
 
           @context contains("figure"), => 
+          
             @rule =>
               @float "left"
               @width "25rem"
               @marginRight "2rem"
+              @marginLeft 0
+              @marginBottom "1rem"
               @padding "0.5rem"
               @border "1px solid silver"
 
@@ -187,12 +216,13 @@ module.exports = class Application extends CSS
           @fontSize "75%"
           @color @lighten(@theme.colors.foreground, 0.33)
 
-        @rule contains(".note"), =>
-          @position "absolute"
-          @left "56rem"
-          typeSize 1
-          @marginTop "1rem"
-          @width "14rem"
+        @context ".post", =>
+          @rule contains(".note"), =>
+            @position "absolute"
+            @left "56rem"
+            typeSize 1
+            @marginTop "1rem"
+            @width "14rem"
       
       @rule ".panel", =>
         @width "100%"

@@ -18,6 +18,8 @@ module.exports = class Frame extends HTML
 
       @head =>
         
+        @title "Finn Mack&mdash;author of Qubit"
+        
         @meta charset: "utf-8"
 
         @meta 
@@ -42,11 +44,7 @@ module.exports = class Frame extends HTML
       
     @footer =>
       @text markdown """
-        &copy; 2012-2013 Finn Mack, All Rights Reserved | 
-        [Contact Us][0] | [Our Blog][1]
-        
-        [0]:/articles/contact-us
-        [1]:/blog
+        &copy; 2012-2013 Finn Mack, All Rights Reserved
         """
 
   logo: ->
@@ -55,7 +53,7 @@ module.exports = class Frame extends HTML
       
   blurb: ->
     @div class: "blurb", =>
-      @p "The World According To Finn Mack."
+      @p "Author of <em>Qubit</em>. Coming soon to an ebook store near you."
       
   feature: ->
     @div class: "feature", =>

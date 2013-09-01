@@ -2,9 +2,9 @@ index:
   type: "file"
   subtype: "blog/summary"
   ext: "html"
-pages: 
+page: 
   type: "directory"
-  subtype: "article/viewer"
-posts:
+  subtype: "article"
+post:
   type: "directory"
-  subtype: "post/viewer"
+  subtype: "blog/post"

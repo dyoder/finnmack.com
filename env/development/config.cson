@@ -5,4 +5,4 @@ web:
     url: "http://localhost:1337"
 publish:
   s3:
-    bucket: "content.rocket.ly"
+    bucket: "finnmack.com"
