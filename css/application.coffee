@@ -41,12 +41,12 @@ module.exports = class Application extends CSS
     
     @breakpoint ({desktop, tablet, mobile, large, medium, small}) =>
       
-      scale 0.9
+      scale (1+1/8)
       
       @rule "body", =>
         @margin "auto"
         @marginTop "2rem"
-        @width "72rem"
+        @width "60rem"
   
       status "success"
       status "alert"
@@ -88,10 +88,10 @@ module.exports = class Application extends CSS
             @rule ({cell}) =>
               do cell
               @verticalAlign "middle"
-              @width "28rem"
+              @width "24rem"
       
             @rule contains("h1"), =>
-              typeSize 7
+              typeSize 6
               @letterSpacing "0.25rem"
               @color "black"
               @fontFamily @theme.fonts.body
@@ -102,7 +102,7 @@ module.exports = class Application extends CSS
               do cell
               @paddingLeft "2rem"
               @verticalAlign "middle"
-              @width "44rem"
+              @width "36rem"
     
             @rule contains("h1"), =>
               @fontFamily @theme.fonts.special
@@ -114,34 +114,20 @@ module.exports = class Application extends CSS
                 typeSize 3
                 @fontFamily @theme.fonts.headings
           
-      rhythm (1+1/4), ({typeSize}) =>
+      rhythm (1+5/8), ({typeSize}) =>
       
         @rule ".feature", ({cell}) =>
           do cell
           typeSize 2
           @verticalAlign "top"
-          @width "48rem"
+          @width "42rem"
           @overflow
       
         @rule "aside", ({cell}) =>
           do cell
           @verticalAlign "top"
           @width "18rem"
-        
-        @rule ".expertise", ({cell,well}) =>
-          do well
-          typeSize 1
-          @fontFamily @theme.fonts.labels
-          @verticalAlign "top"
-          @width "16rem"
-          
-        @rule ".technology", ({cell,well}) =>
-          do well
-          typeSize 1
-          @fontFamily @theme.fonts.labels
-          @verticalAlign "top"
-          @width "16rem"
-          
+                  
         # TODO: refactor this into a list mixin, so that we can
         # more easily set up bulleted lists
         @rule ".feature ul, aside ul", =>
@@ -165,13 +151,13 @@ module.exports = class Application extends CSS
             
             @context contains("figure"), =>
               @rule =>
-                @width "19rem"
+                @width "14rem"
                 @float "right"
                 @marginRight 0
                 @marginLeft "2rem"
-            
+
               @rule contains("img"), =>
-                @width "18rem"
+                @width "13rem"
           
         @context contains(".byline"), =>
           
@@ -190,13 +176,13 @@ module.exports = class Application extends CSS
 
           @rule =>
             @position "relative"
-            @width "54rem"
+            @width "42rem"
 
           @context contains("figure"), => 
           
             @rule =>
               @float "left"
-              @width "25rem"
+              @width "19rem"
               @marginRight "2rem"
               @marginLeft 0
               @marginBottom "1rem"
@@ -204,12 +190,14 @@ module.exports = class Application extends CSS
               @border "1px solid silver"
 
             @rule contains("img"), =>
-              @width "24rem"
+              @width "18rem"
 
             @rule contains("figcaption"), =>
               typeSize 1
               @fontWeight "bold"
-              @marginTop "1rem"
+              @paddingTop "0.5rem"
+              @paddingBottom "0.5rem"
+              @borderTop "1px solid silver"
               @fontFamily @theme.fonts.labels
 
         @rule contains("blockquote"), =>
@@ -219,7 +207,7 @@ module.exports = class Application extends CSS
         @context ".post", =>
           @rule contains(".note"), =>
             @position "absolute"
-            @left "56rem"
+            @left "44rem"
             typeSize 1
             @marginTop "1rem"
             @width "14rem"

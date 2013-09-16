@@ -15,9 +15,9 @@ I had originally figured [Scrivener] would allow me to do whatever customization
 
 <!-- more -->
 
-Long story short, with the help of [pandoc] and [textutil], I ended up converting the entire manuscript into [markdown]. Which was sort of an indirect way to control the ebook generation process. This also allowed me to play some other tricks, like programmatically verifying the times and dates in the scene headings. <span class='note'>The reason this was hard was because, well, time zones. They're everywhere. And, for whatever reason, I can't do time zone math reliably to save my life. Fortunately, it seems entirely unlikely that it will come to that.</span>
+Long story short, with the help of [pandoc] and [textutil], I ended up converting the entire manuscript into [markdown]. Crazy, sure, but also allowed me to play some other tricks, like programmatically verifying the times and dates in the scene headings. <span class='note'>The reason this was hard was because, well, time zones. For whatever reason, I can't do time zone math reliably to save my life. Fortunately, it seems entirely unlikely that it will come to that.</span>
 
-This meant that I *also* had to learn the nuances of what works and what doesn't for ebooks. This is complicated by the fact that there are a lot of devices an ebook could potentially be displayed on. I've tried to keep it simple, but, even so, the results often surprised me. I'm still learning and, once I'm done, it's still going to take a bit more time to test across devices.
+The bad news is that ebooks are still in the dark ages. I'm not going to second-guess how we got here, since it's a damn miracle ebooks are a thing at all. But you've got all these devices, all of which have different capabilities. Niceties like drop-caps are a nightmare.
 
 That said, the delay isn't going to be too bad. I'm hoping for Monday.
 

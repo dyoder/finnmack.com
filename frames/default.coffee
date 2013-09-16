@@ -32,6 +32,18 @@ module.exports = class Frame extends HTML
         for sheet in Frame.stylesheets
           @link href: "/css/#{sheet}.css", type: "text/css", rel: "stylesheet"
 
+        @link rel: "shortcut icon", href: "/img/favicon.png", type: "image/png"
+
+        @script """
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-44034391-1', 'finnmack.com');
+          ga('send', 'pageview');
+        """
+
       @body =>
         do @content
 
@@ -44,7 +56,7 @@ module.exports = class Frame extends HTML
       
     @footer =>
       @text markdown """
-        &copy; 2012-2013 Finn Mack, All Rights Reserved
+        &copy; 2012-2013 [Finn Mack](/page/about-me), All Rights Reserved
         """
 
   logo: ->
@@ -53,7 +65,11 @@ module.exports = class Frame extends HTML
       
   blurb: ->
     @div class: "blurb", =>
-      @p "Author of <em>Qubit</em>. Coming soon to an ebook store near you."
+      @p markdown """
+        Author of *Qubit*. Now available in the [Kindle bookstore][amazon].
+
+        [amazon]:http://www.amazon.com/Qubit-ebook/dp/B00F45N40O/ref=sr_1_13?s=digital-text&ie=UTF8&qid=1378941414&sr=1-13
+        """
       
   feature: ->
     @div class: "feature", =>
