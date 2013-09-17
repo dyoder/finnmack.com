@@ -41,7 +41,7 @@ module.exports = class Frame extends HTML
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-44034391-1', 'finnmack.com');
-          ga('send', 'pageview');
+          // ga('send', 'pageview');
         """
 
       @body =>
