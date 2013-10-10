@@ -1,0 +1,16 @@
+- function excerpt(markup) {
+-   return markup.split("<!-- more -->")[0]
+- }
+
+.blog.summary
+  ul
+    each post, slug in public.posts.data
+      li
+        h3
+          a(href="/posts/" + slug) #{post.title}
+        p.byline
+          span.author #{post.author}
+          span.published #{post.published}
+        != excerpt(partial("/posts/" + slug, post))
+        p
+          a(href="/posts/" + slug) Read more&hellip;

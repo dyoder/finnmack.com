@@ -65,12 +65,16 @@ module.exports = class Frame extends HTML
       
   blurb: ->
     @div class: "blurb", =>
-      @p markdown """
-        Author of *Qubit*. Now available in the [Kindle bookstore][amazon].
+      @p =>
+        @text markdown """
+          Author of *Qubit*. Now available in the [Kindle bookstore][amazon].
 
-        [amazon]:http://www.amazon.com/Qubit-ebook/dp/B00F45N40O/ref=sr_1_13?s=digital-text&ie=UTF8&qid=1378941414&sr=1-13
-        """
-      
+          [amazon]:http://www.amazon.com/Qubit-ebook/dp/B00F45N40O/ref=sr_1_13?s=digital-text&ie=UTF8&qid=1378941414&sr=1-13
+          """
+
+        @div class: "panel", =>
+          @a class: "small success button", href: "/page/about-me", "Join The Mailing List"
+          @a class: "rss small success button", href: "http://feeds.feedburner.com/FinnMack", "Subscribe"
   feature: ->
     @div class: "feature", =>
         

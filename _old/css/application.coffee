@@ -102,16 +102,12 @@ module.exports = class Application extends CSS
               do cell
               @paddingLeft "2rem"
               @verticalAlign "middle"
-              @width "36rem"
+              @width "30rem"
     
-            @rule contains("h1"), =>
-              @fontFamily @theme.fonts.special
-              @marginBottom "1rem"
-          
             rhythm (1+1/6), ({typeSize}) =>
 
               @rule contains("p"), =>
-                typeSize 3
+                typeSize 2
                 @fontFamily @theme.fonts.headings
           
       rhythm (1+5/8), ({typeSize}) =>
@@ -158,6 +154,11 @@ module.exports = class Application extends CSS
 
               @rule contains("img"), =>
                 @width "13rem"
+
+              @rule contains(".icon"), =>
+                @fontSize "8rem"
+                @textAlign "center"
+
           
         @context contains(".byline"), =>
           
@@ -192,6 +193,10 @@ module.exports = class Application extends CSS
             @rule contains("img"), =>
               @width "18rem"
 
+            @rule contains(".icon"), =>
+              @fontSize "12rem"
+              @textAlign "center"
+
             @rule contains("figcaption"), =>
               typeSize 1
               @fontWeight "bold"
@@ -214,7 +219,8 @@ module.exports = class Application extends CSS
       
       @rule ".panel", =>
         @width "100%"
-        @textAlign "left"
+        @textAlign "right"
+        @marginTop "1rem"
 
       @context ".button", ({button}) =>
         do button
@@ -224,3 +230,31 @@ module.exports = class Application extends CSS
       
       @rule ".bump.down.one", =>
         @marginTop "1rem"
+
+      @context "form", ({form}) =>
+        form (rules) =>
+          @context contains(".mc-field-group"), rules
+
+    @text """
+      @font-face {
+        font-family: 'Heydings';
+        src: url('/font/heydings_icons-webfont.eot');
+        src: url('/font/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'),
+             url('/font/heydings_icons-webfont.woff') format('woff'),
+             url('/font/heydings_icons-webfont.ttf') format('truetype'),
+             url('/font/heydings_icons-webfont.svg#heydings_iconsregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+    """
+
+    @rule "nav .panel", => @textAlign "left"
+
+    @rule "a.rss:before", =>
+      @fontFamily "'Heydings'"
+      @content "'R '"
+
+    @rule ".icon", =>
+      @fontFamily "'Heydings'"
+

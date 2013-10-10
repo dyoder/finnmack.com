@@ -1,6 +1,6 @@
     title: "Last Day For Promotion"
     author: "Finn Mack"
-    published: "Sep 14, 2013"
+    published: "Sep 16, 2013"
 ---
 <figure>
   <img src='/img/qubit-number-1.png'/>

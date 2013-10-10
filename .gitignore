@@ -1,2 +1,9 @@
-build/
 .DS_Store
+node_modules
+tmp/
+log/
+logs/
+data/
+*.log
+build/
+www/

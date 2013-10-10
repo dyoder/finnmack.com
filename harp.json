@@ -1,0 +1,9 @@
+{
+  "domains": [""],
+  "globals": {
+    "site": {
+      "title": "Finn Mack - Author of Qubit",
+      "url": "http://finnmack.com"
+    }
+  }
+}

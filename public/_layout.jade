@@ -1,0 +1,30 @@
+!!!
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{ site.title }
+    link(rel="stylesheet", href="/css/site.css")
+    link(rel="alternate", type="application/rss+xml", title="#{ site.title } RSS", href="/rss.xml")
+  body
+    nav
+      .logo
+        a(href="/")
+          img(src="/img/logo.png")
+      .blurb
+        != partial("../_partials/blurb")
+    
+    .feature
+      if current.path[0] === "posts"
+        .blog.post
+          h2 #{ title }
+          p.byline
+            span.author #{author}
+            span.published #{published}
+
+          != yield
+      else 
+        != yield
+
+    footer
+      != partial("../_partials/footer")

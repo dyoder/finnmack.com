@@ -1,0 +1,19 @@
+{
+  "name": "finnmack.com",
+  "version": "0.1.0",
+  "description": "The Panda Strike Web site.",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pandastrike/pandastrike.com.git"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "195769818307846803614c76b2f0b9f362df923d",
+  "dependencies": {
+    "fairmont": "~0.7.0",
+    "c50n": "~0.5.0",
+    "panda-glob": "~0.1.2",
+    "node-system": "0.0.4"
+  }
+}

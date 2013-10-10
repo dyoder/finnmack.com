@@ -2,6 +2,11 @@ index:
   type: "file"
   subtype: "blog/summary"
   ext: "html"
+feed:
+  type: "file"
+  subtype: "blog/feed"
+  frame: "empty"
+  ext: "rss"
 page: 
   type: "directory"
   subtype: "article"
