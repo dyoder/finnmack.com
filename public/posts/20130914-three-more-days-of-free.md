@@ -1,7 +1,4 @@
-    title: "Three More Days Of Free"
-    author: "Finn Mack"
-    published: "Sep 14, 2013"
----
+
 <figure>
   <img src='/img/free.jpg'/>
   <figcaption>Just three more days!</figcaption>

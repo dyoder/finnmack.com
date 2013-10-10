@@ -1,7 +1,4 @@
-    title: "Reviews, My Next Novel, and More"
-    author: "Finn Mack"
-    published: "October 6th, 2013"
----
+
 <figure>
   <img src='/img/chinese-garden.jpg'/>
   <figcaption>The bridge in Chinese Garden, where Katya and Haruo meet.</figcaption>

@@ -1,7 +1,4 @@
-title: "Qubit Is Officially A Thing"
-author: "Finn Mack"
-published: "Sep 12, 2013"
----
+
 <figure>
   <img src='/img/qubit-live.png'/>
   <figcaption>I know how to upload things.</figcaption>

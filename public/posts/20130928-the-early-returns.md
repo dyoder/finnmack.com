@@ -1,7 +1,4 @@
-    title: "The Early Returns"
-    author: "Finn Mack"
-    published: "Sep 27, 2013"
----
+
 <figure>
   <img src='/img/tigers-win-division.jpg'/>
   <figcaption>And, also, the Tigers won their third straight Central division championship. Coincidence?</figcaption>

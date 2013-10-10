@@ -1,7 +1,4 @@
-title: "A Slight Delay"
-author: "Finn Mack"
-published: "Aug 29, 2013"
----
+
 <figure>
   <img src='/img/printing-press.jpg'/>
   <figcaption>The *Qubit* team hard at work assembling the ebook.</figcaption>

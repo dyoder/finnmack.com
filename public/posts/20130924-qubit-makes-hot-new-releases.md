@@ -1,7 +1,4 @@
-    title: '*Qubit* Makes "Hot New Releases"'
-    author: "Finn Mack"
-    published: "Sep 24, 2013"
----
+
 <figure>
   <img src='/img/gangnam-style.jpeg'/>
   <figcaption>Not quite *that* hot.</figcaption>

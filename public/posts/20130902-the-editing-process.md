@@ -1,7 +1,4 @@
-title: "The Editing Process"
-author: "Finn Mack"
-published: "Sep 2, 2013"
----
+
 <figure>
   <img src='/img/catch-22.jpg'/>
   <figcaption>Yossarian gets me.</figcaption>

@@ -1,7 +1,4 @@
-title: "Covert Art"
-author: "Finn Mack"
-published: "Aug 21, 2013"
----
+
 <figure>
   <img src='/img/qubit-cover-art.png'/>
   <figcaption>Qubit covert art, by [Martin Saavedra][ms]</figcaption>

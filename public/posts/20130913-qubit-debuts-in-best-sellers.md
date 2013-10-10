@@ -1,7 +1,4 @@
-    title: "Qubit Debuts In Best Sellers"
-    author: "Finn Mack"
-    published: "Sep 13, 2013"
----
+
 <figure>
   <img src='/img/top-seller.png'/>
   <figcaption>Proof for the ages.</figcaption>

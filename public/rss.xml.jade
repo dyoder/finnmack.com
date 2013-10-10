@@ -1,0 +1,10 @@
+!!!xml
+rss(version='2.0')
+  channel  
+    title #{ site.title }
+    link #{ site.url }/
+    each post, slug in public.posts.data
+      item
+        title #{ post.title }
+        link #{ site.url }/posts/#{ slug }
+        guid #{ site.url }/posts/#{ slug }

@@ -1,7 +1,4 @@
-title: "The Pilot Wave Theory"
-author: "Finn Mack"
-published: "Sep 10, 2013"
----
+
 <figure>
   <img src='/img/pilot-wave.jpg'/>
   <figcaption>An illustration of a pilot wave. Source: *[Aethro-Kinematics]*.</figcaption>
