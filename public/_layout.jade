@@ -15,7 +15,7 @@ html(lang="en")
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-44034391-1', 'finnmack.com');
-      // ga('send', 'pageview');
+      ga('send', 'pageview');
 
   body
     nav
@@ -25,7 +25,7 @@ html(lang="en")
       .blurb
         != partial("_partials/blurb")
         .panel
-          a.small.success.button(href="/page/about-me") Join The Mailing List
+          a.small.success.button(href="/pages/about-me") Join The Mailing List
           a.small.rss.success.button(href="http://feeds.feedburner.com/FinnMack") Subscribe
     
     .feature

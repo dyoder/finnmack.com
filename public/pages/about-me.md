@@ -1,5 +1,3 @@
-title: "About Me"
----
 I'm a writer and hacker who lives in Santa Monica, California, with my beautiful daughter. You can reach me:
 
 * Via [Twitter]
