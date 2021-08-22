@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "@dashkite/genie": "^0.5.4",
-    "@dashkite/genie-presets": "file:../../dashkite/genie-presets"
+    "@dashkite/genie-presets": "^0.4.13"
   }
 }
