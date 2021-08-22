@@ -1,0 +1,33 @@
+presets:
+  coffeescript:
+    targets:
+      browser:
+        - preset: browser
+          glob:
+            - src/**/*.coffee
+  verify: null
+  update: null
+  release: null
+  esm: null
+  pug:
+    targets:
+      app:
+        - preset: render
+          glob: src/**/*.pug
+          document: false
+  media: null
+  server:
+    directory: ./build/browser/src
+    fallback: ./build/browser/src/index.html
+    port: 8003
+    logging: false
+  stylus:
+    targets:
+      browser:
+        - preset: css
+          glob: src/**/*.styl
+  yaml:
+    targets:
+      browser:
+        - preset: js
+          glob: src/**/*.yaml

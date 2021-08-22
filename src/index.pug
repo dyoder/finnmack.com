@@ -1,0 +1,52 @@
+doctype html 
+
+html 
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    //- link(rel='shortcut icon', href='/shared/images/favicon.ico')
+
+    link( rel = "stylesheet" href = "https://use.typekit.net/ccp3lhl.css" )
+    link( 
+      rel = "stylesheet"
+      href = "https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.min.css"
+    )
+    script(
+      src = "https://kit.fontawesome.com/a179d6993b.js"
+      crossorigin = "anonymous"
+    )
+
+    link(rel="stylesheet" href="/index.css")
+    title Finn Mack 
+
+  body 
+    header 
+      h1 I'm Finn Mack and I write novels.
+      a( href = "https://twitter.com/finnmack" )
+        i.fab.fa-twitter
+        span Twitter
+      a( href = "https://blog.finnmack.com" )
+        i.far.fa-paragraph 
+        span Blog
+    main 
+      article#qubit 
+        header 
+          h2 Debut Novel: Qubit 
+        section
+          section
+            include:markdown qubit-summary.md 
+          figure 
+            img( src = "/media/qubit-cover.png" )
+            a(
+              src = "https://www.amazon.com/Qubit-Finn-Mack-ebook/dp/B00F45N40O"
+            ) Buy on Amazon
+      article#about 
+        header 
+          h2 About The Author 
+        section 
+          include:markdown about-the-author.md
+    footer
+      :markdown
+        &copy; Copyright 2013-2021, Finn Mack. All rights reserved worldwide.

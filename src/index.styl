@@ -1,0 +1,178 @@
+// mixins
+width(value)
+  if value == "stretch"
+    width -moz-available
+    width -webkit-fill-available
+    width stretch
+  else
+    width value
+
+height(value)
+  if value == "stretch"
+    height -moz-available
+    height -webkit-fill-available
+    height stretch
+  else
+    height value
+
+rhythm(rem, ratio)
+  line-height unit(rem, 'rem')
+  font-size unit(rem * ratio, 'rem')
+
+// theme
+
+:root
+  // --primary-color #c00202
+  --primary-color #C83226
+  --secondary-color black
+  --heading-color var(--primary-color)
+  --heading-font neo-sans, sans-serif
+  --copy-color #fafafa
+  --copy-font ff-nexus-typewriter, sans-serif
+  --link-color var(--primary-color)
+  --border-color var(--primary-color)
+  --border-radius 0.25rem
+
+// layout
+body
+  width 100vw
+  height 100vh
+  display grid
+  grid-template-rows auto 1fr auto
+  grid-template-columns 100%
+
+// basic typography
+article
+
+  h1, h2, h3, h4, h5, p, ul, ol, li, blockquote
+    margin 0
+    padding 0
+
+  h1, h2, h3, h4, h5, p, li, blockquote
+    margin-bottom 0.5rem
+
+  h1, h2, h3, h4, h5
+    font-family var(--heading-font)
+    color var(--heading-color)
+  
+  h1
+    rhythm 3.5, .9
+  h2
+    rhythm 2.5, .8
+  h3
+    rhythm 1.75, .8
+  h4
+    rhythm 1.25, .75
+  h5
+    rhythm 1, .8
+
+  p, ul, ol, li, blockquote
+    rhythm 1.75, (2/3)
+    color var(--copy-color)
+    font-family var(--copy-font)
+
+  ul, ol
+    margin-left 1.5rem
+
+  blockquote
+    font-style italic
+    padding-left 0.5rem
+    border-left 2px solid var(--primary-color)
+
+// links, buttons
+a, a:visited
+  text-decoration none
+  color var(--link-color)
+
+// page styles
+body
+  color var(--text-color)
+  background-color var(--secondary-color)
+  font-family var(--copy-font)
+  row-gap 2rem
+
+  & > header
+    display flex
+    flex-wrap wrap
+    align-items center
+    gap 2rem
+    padding 1rem
+    width calc(80% - 2rem)
+    margin 0 auto
+
+    h1
+      margin 0
+      padding 0
+      font-family var(--heading-font)
+      color var(--heading-color)
+      rhythm 3.5, .9
+
+    a
+      display flex
+      align-items center
+      gap 0.5rem
+      rhythm 1, 0.9
+
+  & > main
+    display flex
+    flex-flow column
+    gap 2rem
+    padding 1rem
+    width calc(80% - 2rem)
+    margin 0 auto
+
+    & > article#qubit
+      display flex
+      flex-flow column
+      gap 2rem
+
+      & > header
+        // margin-right auto
+
+      & > section
+        display flex
+        flex-flow row wrap
+        gap 2rem
+
+        & > section
+          flex 2
+          min-width calc(320px - 4rem)
+          max-width 60ch
+        & > figure
+          flex 1
+          max-width 18rem
+          margin 0
+          padding 0
+          display flex
+          flex-flow column
+          align-items center
+          gap 1rem
+
+          & > img
+            width 100%
+
+          & > a
+            rhythm 1, 1
+            border 1px solid var(--border-color)
+            border-radius var(--border-radius)
+            padding 0.5rem
+
+    & > article#about
+      display flex
+      flex-flow column
+      gap 2rem
+
+      & > header
+        margin-right auto
+
+      & > section
+        max-width 80ch
+        min-width calc(320px - 4rem)
+
+
+  & > footer
+    border-top 1px solid var(--border-color)
+    padding 1rem
+    text-align center
+    color var(--heading-color)
+    rhythm 1, 0.8

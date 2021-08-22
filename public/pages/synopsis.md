@@ -1,9 +1,0 @@
-  title: "*Qubit* Synopsis"
----
-An ambitious Singapore gangster recruits an elite hacker to steal a devastatingly powerful quantum computer and hijack the world's financial markets. Meanwhile, a beautiful streetwise CIA agent is determined to foil their plan in a case that could make or break her career.
-
-With settings ranging from Detroit to Singapore to the slums of Bihar, India (the "Sicily of India"), *Qubit* examines both the vulnerability of our cryptographic infrastructure and corruptibility of our financial systems. The story features international intrigue, a violent gang war, an unlikely love story, and an intricate cryptographic chess match that takes place as the global economy teeters on the brink of collapse.
-
-“Brilliant…Well written with complex characters…An author to follow.”
-
-“Outstanding! The characters…are wonderfully fleshed out.” 

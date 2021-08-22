@@ -1,8 +1,0 @@
-web:
-  host: "0.0.0.0"
-  port: "1338"
-  api:
-    url: "http://localhost:1337"
-publish:
-  s3:
-    bucket: "finnmack.com"
