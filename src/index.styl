@@ -19,6 +19,16 @@ rhythm(rem, ratio)
   line-height unit(rem, 'rem')
   font-size unit(rem * ratio, 'rem')
 
+row-gap(size)
+  margin-bottom s("-%s", size)
+  & > :not(:last-child)
+    margin-bottom size
+
+column-gap(size)
+  margin-right s("-%s", size)
+  & > :not(:last-child)
+    margin-right size
+
 // theme
 
 :root
@@ -95,7 +105,7 @@ body
     display flex
     flex-wrap wrap
     align-items center
-    gap 2rem
+    column-gap 2rem
     padding 1rem
     width calc(80% - 2rem)
     margin 0 auto
@@ -110,21 +120,25 @@ body
     a
       display flex
       align-items center
-      gap 0.5rem
+      column-gap 0.5rem
       rhythm 1, 0.9
 
   & > main
     display flex
     flex-flow column
-    gap 2rem
+    margin 0 auto
+    column-gap 2rem
     padding 1rem
     width calc(80% - 2rem)
-    margin 0 auto
 
     & > article#qubit
       display flex
       flex-flow column
-      gap 2rem
+      row-gap 2rem
+      // reset to account for nested flex
+      // this will go away when we can use
+      // the real CSS gap properties
+      margin-bottom 2rem
 
       & > header
         // margin-right auto
@@ -132,7 +146,7 @@ body
       & > section
         display flex
         flex-flow row wrap
-        gap 2rem
+        column-gap 2rem
 
         & > section
           flex 2
@@ -146,7 +160,7 @@ body
           display flex
           flex-flow column
           align-items center
-          gap 1rem
+          row-gap 1rem
 
           & > img
             width 100%
@@ -160,7 +174,7 @@ body
     & > article#about
       display flex
       flex-flow column
-      gap 2rem
+      row-gap 2rem
 
       & > header
         margin-right auto
