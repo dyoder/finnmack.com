@@ -16,11 +16,6 @@ presets:
           glob: src/**/*.pug
           document: false
   media: null
-  server:
-    directory: ./build/browser/src
-    fallback: ./build/browser/src/index.html
-    port: 8003
-    logging: false
   stylus:
     targets:
       browser:
@@ -31,3 +26,23 @@ presets:
       browser:
         - preset: js
           glob: src/**/*.yaml
+
+sky:
+  namespace: finnmack
+  edge:
+    name: edge
+    certificate:
+      verification: finnmack.com
+    origins:
+      - domain: finnmack.com.s3-website-us-east-1.amazonaws.com
+    aliases:
+      - finnmack.com
+      - www.finnmack.com
+  buckets:
+    - name: finnmack.com
+      website:
+        index: index.html
+        error: error.html
+      publish:
+        root: build/browser/src
+        glob: "**/*"

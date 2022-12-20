@@ -10,6 +10,6 @@
   "devDependencies": {
     "@dashkite/genie": "^0.5.4",
     "@dashkite/genie-presets": "^0.4.13",
-    "haiku9": "^4.1.0"
+    "@dashkite/sky-presets": "file:../../dashkite/sky-presets"
   }
 }
